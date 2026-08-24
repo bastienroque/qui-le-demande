@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ Qui Le Demande ?
 
-## Getting Started
+Official showcase website and lead generation platform for **Qui Le Demande**, a collective of digital marketing experts specializing in Google Ads & Meta acquisition, custom web development, and tracking strategy.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🎨 Design System & UI
+
+The site adopts a bold **Neo-Brutalist** visual identity:
+
+- **Typography:** Heavy font weights (`font-black`) paired with high-contrast layouts.
+- **UI Components:** Sharp black borders (`border-2 border-brand-black`) and high-impact badges.
+- **Color Palette:** Focused use of brand red (`bg-brand-red`), solid black (`brand-black`), and stark white (`brand-white`).
+
+---
+
+## 🚀 Key Features
+
+- **Dynamic Offerings & Services:**
+  - Interactive **Services** section featuring real-time read/unread status management.
+  - Comprehensive pricing grids for monthly subscriptions (**Essential**, **E-commerce**) and **One-shot** interventions.
+- **About Section:** Highlighted agency values (under 24h response time, full Google Ads account transparency).
+- **Process / Method Section:** Responsive 3-column grid system optimized for readability.
+- **Advanced Contact Form:**
+  - Support format selection (Subscription vs. One-shot project).
+  - Categorized service selection (Ads, Tracking, Web, Audits).
+  - Preferred callback time window selection.
+- **GDPR & Google Consent Mode v2 (CoMo v2) Compliance:**
+  - Native Advanced Consent Mode integration.
+  - Explicit signal management for `analytics_storage`, `ad_storage`, `ad_user_data`, and `ad_personalization`.
+  - Granular customization modal with dynamic re-triggering from the footer.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** [Next.js](https://nextjs.org/) (App Router, Client & Server Components)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Language:** [TypeScript](https://www.typescriptlang.org/)
+- **Components:** Custom Neo-Brutalist UI Kit (`Button`, `Input`, `Typography`, `CookieBanner`)
+
+---
+
+© Qui Le Demande — Tous droits réservés.
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
