@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-lexend: "Lexend", sans-serif;
+
+  --color-brand-blue: #034beb;
+  --color-brand-red: #f00318;
+  --color-brand-black: #000000;
+  --color-brand-white: #ffffff;
+
+  --animate-float-slow: float 4s ease-in-out infinite;
+  --animate-float-delayed: float 4s ease-in-out 2.5s infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+}
+
+@layer base {
+  body {
+    font-family: var(--font-lexend);
+    @apply bg-brand-white text-brand-black;
+  }
+}
