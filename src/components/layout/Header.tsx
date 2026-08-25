@@ -10,6 +10,7 @@ import { navLinks } from "@/lib/layout/nav-links";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState<string>("");
   const pathname = usePathname();
 
   const isContactPage = pathname === "/contact";
@@ -29,10 +30,32 @@ const Header = () => {
     };
   }, [isOpen]);
 
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      setActiveSection(id);
+
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-brand-blue text-brand-white border-b-2 border-brand-white">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link href="/" onClick={() => setIsOpen(false)}>
+        <Link
+          href="/"
+          onClick={(e) => {
+            const element = document.getElementById("hero");
+            if (element) {
+              e.preventDefault();
+              scrollToSection("hero");
+            }
+            setIsOpen(false);
+          }}
+        >
           <Logo className="w-44 md:w-48 pt-1 h-auto hover:text-brand-black transition-colors duration-200" />
         </Link>
 

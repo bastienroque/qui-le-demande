@@ -57,7 +57,6 @@ export const OffresHeroSection = () => {
 
               <div className="space-y-2">
                 <div className="flex justify-between items-center text-sm font-black">
-                  <span>SANS ENGAGEMENT</span>
                   <span className="bg-brand-black text-brand-white px-2 py-0.5 text-xs">
                     100%
                   </span>

@@ -20,7 +20,7 @@ export default function ServicesPage() {
         <StickyServiceNav />
 
         <section className="py-16 md:py-28 bg-brand-white">
-          <div className="container mx-auto px-4 max-w-5xl space-y-12 md:space-y-16">
+          <div className="container mx-auto px-4 space-y-12 md:space-y-16">
             {SERVICES_POLES.map((pole) => (
               <ServicePoleCard key={pole.id} pole={pole} />
             ))}

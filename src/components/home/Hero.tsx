@@ -7,7 +7,10 @@ import Typewriter from "../ui/Typewriter";
 
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-[80vh] py-16 sm:py-24 md:py-48 text-center bg-brand-white text-brand-black overflow-hidden">
+    <section
+      id="hero"
+      className="scroll-mt-20 relative w-full min-h-[80vh] py-16 sm:py-24 md:py-48 text-center bg-brand-white text-brand-black overflow-hidden"
+    >
       <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#000_1px,transparent_1px)] bg-size-[20px_20px] pointer-events-none" />
 
       <div className="hidden lg:block absolute top-[12%] left-[5%] xl:left-[10%] z-10 animate-float-slow pointer-events-none">
@@ -84,7 +87,7 @@ export const Hero = () => {
           </P>
         </div>
 
-        <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <div className="mt-8 flex flex-col sm:flex-row gap-8 md:gap-4 justify-center items-center">
           <Link href="/contact" className="w-full sm:w-auto">
             <Button
               variant="primary"

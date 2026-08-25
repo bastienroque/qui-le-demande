@@ -22,7 +22,7 @@ export const SIMULATOR_OFFERS: Record<
     id: "essentiel",
     name: "Abonnement Essentiel",
     badge: "Ads & Tracking",
-    setupFee: "79 € (Frais de setup)",
+    setupFee: "79 €",
     note: "Hors gestion Shopping via Merchant Center & Hotel Ads.",
     steps: [
       { label: "< 500 €", price: 180 },
@@ -46,7 +46,7 @@ export const SIMULATOR_OFFERS: Record<
     id: "e-commerce",
     name: "Abonnement E-commerce",
     badge: "Shopping & Merchant Center",
-    setupFee: "119 € (Frais de setup)",
+    setupFee: "119 €",
     steps: [
       { label: "< 1000 €", price: 300 },
       { label: "1000 - 3000 €", price: 550 },

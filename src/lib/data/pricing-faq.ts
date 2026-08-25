@@ -6,12 +6,6 @@ export interface FAQItem {
 
 export const PRICING_FAQ: FAQItem[] = [
   {
-    id: "commitment",
-    question: "Y a-t-il un engagement de durée sur les abonnements ?",
-    answer:
-      "Non, nos abonnements mensuels sont sans engagement. Vous pouvez ajuster ou mettre en pause votre formule à tout moment avec un simple préavis de 15 jours avant la date de renouvellement.",
-  },
-  {
     id: "ad-budget",
     question:
       "Le budget publicitaire Google Ads est-il inclus dans les tarifs ?",

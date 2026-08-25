@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
 import Script from "next/script";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import CookieBanner from "@/components/compliance/CookieBanner";
 import "./globals.css";
 
@@ -44,8 +44,7 @@ export default function RootLayout({
 
         <CookieBanner />
 
-        <GoogleAnalytics gaId="G-XXXXXXXXXX" />
-        <GoogleTagManager gtmId="GTM-XXXXXXX" />
+        <GoogleTagManager gtmId="GTM-KVWD6R9T" />
       </body>
     </html>
   );

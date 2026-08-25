@@ -133,7 +133,7 @@ export const PricingSimulatorSection = () => {
                 </span>
                 {!currentStep.isMax && (
                   <span className="text-xs font-bold text-brand-black/60 uppercase">
-                    / mois (sans engagement)
+                    / mois
                   </span>
                 )}
               </div>

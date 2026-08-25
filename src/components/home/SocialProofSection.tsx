@@ -8,13 +8,13 @@ import Button from "@/components/ui/Button";
 const services = [
   {
     title: "Comptes Optimisés",
-    highlight: "+1 000",
+    highlight: "+1 300",
     description: "comptes Ads audités et maximisés",
     tail: "top-right" as const,
   },
   {
     title: "Experts Seniors",
-    highlight: "100%",
+    highlight: "+10 ans d'expérience",
     description: "de conseillers et techniciens dédiés",
     tail: "bottom-left" as const,
   },
@@ -26,13 +26,13 @@ const services = [
   },
   {
     title: "Budget Sous Gestion",
-    highlight: "+500 k€",
+    highlight: "+600 k€",
     description: "d'investissements Ads optimisés / an",
     tail: "bottom-left" as const,
   },
   {
-    title: "100% Propriété",
-    highlight: "Accès total",
+    title: "Accès total",
+    highlight: "Vos Propriétés",
     description: "et contrôle permanent sur vos actifs",
     tail: "top-right" as const,
   },

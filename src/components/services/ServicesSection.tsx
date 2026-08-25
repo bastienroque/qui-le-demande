@@ -40,7 +40,7 @@ export const ServicesSection = ({
     <section className="w-full bg-brand-red text-brand-white py-24 md:py-36 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="bg-brand-white text-brand-black border-2 border-brand-black">
-          <div className="py-6 px-6 md:px-10 border-b-2 border-brand-black bg-brand-white flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="py-4 px-4 md:px-10 border-b-2 border-brand-black bg-brand-white flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
               <span className="inline-block bg-brand-black text-brand-white text-xs font-black uppercase px-3 py-1 tracking-widest border-2 border-brand-black mb-3">
                 {unreadCount > 0
@@ -53,7 +53,7 @@ export const ServicesSection = ({
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 p-6 md:p-10 bg-brand-white">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-8 p-4 md:p-10 bg-brand-white">
             <div className="md:col-span-5 flex flex-col gap-4">
               {poles.map((item) => {
                 const isActive = item.id === selectedId;
@@ -82,7 +82,7 @@ export const ServicesSection = ({
 
             <div
               id="content"
-              className="md:col-span-7 bg-brand-white text-brand-black border-2 border-brand-black p-6 md:p-8 flex flex-col justify-between min-h-87.5"
+              className="md:col-span-7 bg-brand-white text-brand-black border-2 border-brand-black p-4 md:p-8 flex flex-col justify-between min-h-87.5"
             >
               {activePole ? (
                 <div className="flex flex-col justify-between h-full">
@@ -131,7 +131,7 @@ export const ServicesSection = ({
                   </div>
                 </div>
               ) : (
-                <div className="h-full flex flex-col items-center justify-center text-center p-6 space-y-3">
+                <div className="h-full flex flex-col items-center justify-center text-center p-4 space-y-3">
                   <span className="w-4 h-4 bg-brand-red border-2 border-brand-black rounded-full animate-bounce" />
                   <p className="text-base md:text-lg font-bold text-brand-black/80 max-w-xs">
                     Cliquez sur un message pour ouvrir le détail de nos
@@ -143,7 +143,7 @@ export const ServicesSection = ({
           </div>
 
           {showButton && (
-            <div className="p-6 md:px-10 border-t-2 border-brand-black bg-brand-white">
+            <div className="p-4 md:px-10 border-t-2 border-brand-black bg-brand-white">
               <Link href="/services" className="block">
                 <Button
                   variant="primary"

@@ -29,7 +29,7 @@ export default function PricingPage() {
           id="abonnement"
           className="scroll-mt-8 py-24 md:py-32 bg-brand-white border-b-2 border-brand-black"
         >
-          <div className="container mx-auto px-4 max-w-6xl space-y-12">
+          <div className="container mx-auto px-4 space-y-12">
             <div className="text-center space-y-3 max-w-2xl mx-auto">
               <span className="inline-block bg-brand-red text-brand-white text-xs font-black uppercase px-3 py-1 border-2 border-brand-black">
                 Partenariat Continu

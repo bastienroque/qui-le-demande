@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { navLinks } from "@/lib/layout/nav-links";
+import { useState } from "react";
 
 const socialLinks = [
   { href: "https://www.instagram.com", label: "Instagram" },
@@ -21,7 +22,20 @@ const legalLinks = [
 const currentYear = new Date().getFullYear();
 
 const Footer = () => {
+  const [activeSection, setActiveSection] = useState<string>("");
   const pathname = usePathname();
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      setActiveSection(id);
+
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   return (
     <footer className="bg-brand-blue text-white py-12 md:py-16 border-t-2 border-brand-white relative overflow-hidden">
@@ -42,7 +56,16 @@ const Footer = () => {
               ))}
             </div>
 
-            <Link href="/" className="inline-block">
+            <Link
+              href="/"
+              onClick={(e) => {
+                const element = document.getElementById("hero");
+                if (element) {
+                  e.preventDefault();
+                  scrollToSection("hero");
+                }
+              }}
+            >
               <Logo className="w-full max-w-xs md:w-lg h-auto text-brand-white hover:text-brand-black transition-colors duration-200" />
             </Link>
           </div>

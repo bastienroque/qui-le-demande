@@ -94,9 +94,9 @@ export const MONTHLY_PLANS: PricingPlan[] = [
   {
     id: "essentiel",
     name: "Essentiel",
-    subtitle: "Sans engagement • Hors Merchant Center & Hotel Ads",
+    subtitle: "Hors Merchant Center & Hotel Ads",
     basePrice: "180 €",
-    setupFee: "79 € (frais de setup)",
+    setupFee: "79 €",
     commission: "n/a",
     period: "/ mois",
     tiers: [
@@ -121,9 +121,9 @@ export const MONTHLY_PLANS: PricingPlan[] = [
   {
     id: "e-commerce",
     name: "E-commerce",
-    subtitle: "Sans engagement • Gestion avancée & Shopping",
+    subtitle: "Gestion avancée & Shopping",
     basePrice: "300 €",
-    setupFee: "119 € (frais de setup)",
+    setupFee: "119 €",
     commission: "Sur devis",
     period: "/ mois",
     badge: "Populaire",
@@ -180,7 +180,6 @@ export const ONE_SHOT_SERVICES_BY_CATEGORY: OneShotCategory[] = [
         id: "audit-ads",
         badge: "Audit Express",
         title: "Audit Google Ads & Tracking (1h)",
-        price: "60 €",
         delay: "Sur créneau",
         description:
           "Analyse ciblée de votre compte publicitaire et de votre tracking.",
@@ -194,7 +193,6 @@ export const ONE_SHOT_SERVICES_BY_CATEGORY: OneShotCategory[] = [
         id: "formation-express",
         badge: "Formation",
         title: "Formation Express (2h)",
-        price: "150 € - 200 €",
         delay: "Sur créneau",
         description:
           "Session de formation individuelle pour prendre en main vos leviers.",
@@ -208,7 +206,6 @@ export const ONE_SHOT_SERVICES_BY_CATEGORY: OneShotCategory[] = [
         id: "conformite-tracking",
         badge: "RGPD",
         title: "Conformité Tracking & CoMo",
-        price: "80 € - 100 €",
         delay: "Intervention rapide",
         description:
           "Mise aux normes de la collecte de données et du consentement.",
