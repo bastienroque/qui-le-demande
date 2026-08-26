@@ -28,27 +28,34 @@ export default function CookieBanner() {
     marketing: true,
   });
 
-  useEffect(() => {
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      window.gtag("consent", "default", {
-        analytics_storage: "denied",
-        ad_storage: "denied",
-        ad_user_data: "denied",
-        ad_personalization: "denied",
-        wait_for_update: 500,
-      });
-    }
+  const saveConsent = (consentData: Record<string, boolean>) => {
+    const payload = {
+      consent: consentData,
+      timestamp: Date.now(),
+    };
+    localStorage.setItem("cookie_consent_v2", JSON.stringify(payload));
+  };
 
-    const savedConsent = localStorage.getItem("cookie_consent_v2");
-    if (!savedConsent) {
-      setIsVisible(true);
-    } else {
+  useEffect(() => {
+    const saved = localStorage.getItem("cookie_consent_v2");
+
+    if (saved) {
       try {
-        const parsedConsent: ConsentState = JSON.parse(savedConsent);
-        applyConsent(parsedConsent);
+        const { timestamp } = JSON.parse(saved);
+        const SIX_MONTHS_MS = 180 * 24 * 60 * 60 * 1000;
+
+        if (Date.now() - timestamp > SIX_MONTHS_MS) {
+          localStorage.removeItem("cookie_consent_v2");
+          setIsVisible(true);
+        } else {
+          setIsVisible(false);
+        }
       } catch {
+        localStorage.removeItem("cookie_consent_v2");
         setIsVisible(true);
       }
+    } else {
+      setIsVisible(true);
     }
   }, []);
 

@@ -16,7 +16,7 @@ const legalLinks = [
     href: "/politique-de-confidentialite",
     label: "Politique de Confidentialité",
   },
-  { href: "/rgpd", label: "Conformités RGPD" },
+  { href: "/mentions-legales", label: "Mentions Légales" },
 ];
 
 const currentYear = new Date().getFullYear();

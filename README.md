@@ -18,7 +18,7 @@ The site adopts a bold **Neo-Brutalist** visual identity:
 
 - **Dynamic Offerings & Services:**
   - Interactive **Services** section featuring real-time read/unread status management.
-  - Comprehensive pricing grids for monthly subscriptions (**Essential**, **E-commerce**) and **One-shot** interventions.
+  - Comprehensive pricing grids for monthly subscriptions (**Essential**, **E-commerce**) and **One-shot** Services.
 - **About Section:** Highlighted agency values (under 24h response time, full Google Ads account transparency).
 - **Process / Method Section:** Responsive 3-column grid system optimized for readability.
 - **Advanced Contact Form:**

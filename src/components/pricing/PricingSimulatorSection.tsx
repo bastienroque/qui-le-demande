@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { SIMULATOR_OFFERS } from "@/lib/data/pricing-simulator";
+import Link from "next/link";
 
 export const PricingSimulatorSection = () => {
   const [selectedOfferId, setSelectedOfferId] = useState<
@@ -25,6 +25,12 @@ export const PricingSimulatorSection = () => {
     typeof currentStep.price === "number"
       ? `${currentStep.price}€`
       : currentStep.price;
+
+  const redirectParams = new URLSearchParams({
+    offerType: "Abonnement Mensuel",
+    serviceType: `${currentOffer.name} (${currentOffer.badge})`,
+    budget: currentStep.label,
+  }).toString();
 
   return (
     <section
@@ -151,16 +157,15 @@ export const PricingSimulatorSection = () => {
               </ul>
             </div>
 
-            <Link
-              href={`/contact?formula=${currentOffer.id}&budget=${currentStep.label}`}
-            >
+            <Link href={`/contact?${redirectParams}`}>
               <Button
+                type="button"
                 variant="primary"
                 tail="bottom-right"
                 className="w-full font-black uppercase py-3 mb-2 border-2 border-brand-black"
               >
                 {currentStep.isMax
-                  ? "Demander une étude →"
+                  ? "Demander un devis →"
                   : "Souscrire à cette formule →"}
               </Button>
             </Link>

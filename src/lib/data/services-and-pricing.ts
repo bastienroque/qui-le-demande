@@ -174,7 +174,7 @@ export interface OneShotCategory {
 export const ONE_SHOT_SERVICES_BY_CATEGORY: OneShotCategory[] = [
   {
     id: "ads",
-    categoryLabel: "Interventions Ads & Tracking",
+    categoryLabel: "Services Ads & Tracking",
     services: [
       {
         id: "audit-ads",
@@ -206,7 +206,7 @@ export const ONE_SHOT_SERVICES_BY_CATEGORY: OneShotCategory[] = [
         id: "conformite-tracking",
         badge: "RGPD",
         title: "Conformité Tracking & CoMo",
-        delay: "Intervention rapide",
+        delay: "service rapide",
         description:
           "Mise aux normes de la collecte de données et du consentement.",
         deliverables: [
@@ -219,7 +219,7 @@ export const ONE_SHOT_SERVICES_BY_CATEGORY: OneShotCategory[] = [
   },
   {
     id: "web",
-    categoryLabel: "Projets & Interventions Web",
+    categoryLabel: "Projets & Services Web",
     services: [
       {
         id: "landing-express",

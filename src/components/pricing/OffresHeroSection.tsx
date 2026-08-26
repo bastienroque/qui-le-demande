@@ -31,8 +31,8 @@ export const OffresHeroSection = () => {
             </div>
 
             <P className="text-base md:text-lg font-medium text-brand-black/90 leading-relaxed max-w-2xl">
-              Abonnements d'accompagnement ou interventions ponctuelles :
-              choisissez le format adapté à votre maturité et vos objectifs.
+              Abonnements d'accompagnement ou Services ponctuelles : choisissez
+              le format adapté à votre maturité et vos objectifs.
             </P>
           </motion.div>
 
