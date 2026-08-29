@@ -142,3 +142,9 @@ export interface OneShotService {
   description: string;
   deliverables: string[];
 }
+
+export interface OneShotCategory {
+  id: "ads" | "web";
+  categoryLabel: string;
+  services: OneShotService[];
+}

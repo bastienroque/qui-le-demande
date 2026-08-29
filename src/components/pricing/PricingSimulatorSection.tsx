@@ -147,7 +147,7 @@ export const PricingSimulatorSection = () => {
               <p className="text-xs font-black uppercase tracking-wider mb-2">
                 Services inclus :
               </p>
-              <ul className="space-y-1.5 mb-6 text-xs font-bold">
+              <ul className="space-y-1.5 mb-6 text-xs md:text-sm font-bold">
                 {currentOffer.features.map((feat, idx) => (
                   <li key={idx} className="flex items-start gap-2">
                     <span className="font-black text-brand-red">&rarr;</span>

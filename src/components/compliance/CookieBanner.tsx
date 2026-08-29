@@ -10,6 +10,11 @@ type ConsentState = {
   ad_personalization: "granted" | "denied";
 };
 
+type StoredConsentPayload = {
+  consent: ConsentState;
+  timestamp: number;
+};
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -28,27 +33,28 @@ export default function CookieBanner() {
     marketing: true,
   });
 
-  const saveConsent = (consentData: Record<string, boolean>) => {
-    const payload = {
-      consent: consentData,
-      timestamp: Date.now(),
-    };
-    localStorage.setItem("cookie_consent_v2", JSON.stringify(payload));
-  };
-
   useEffect(() => {
     const saved = localStorage.getItem("cookie_consent_v2");
 
     if (saved) {
       try {
-        const { timestamp } = JSON.parse(saved);
+        const payload: StoredConsentPayload = JSON.parse(saved);
         const SIX_MONTHS_MS = 180 * 24 * 60 * 60 * 1000;
 
-        if (Date.now() - timestamp > SIX_MONTHS_MS) {
+        if (
+          !payload.timestamp ||
+          Date.now() - payload.timestamp > SIX_MONTHS_MS
+        ) {
           localStorage.removeItem("cookie_consent_v2");
           setIsVisible(true);
         } else {
           setIsVisible(false);
+          if (
+            typeof window !== "undefined" &&
+            typeof window.gtag === "function"
+          ) {
+            window.gtag("consent", "update", payload.consent);
+          }
         }
       } catch {
         localStorage.removeItem("cookie_consent_v2");
@@ -60,7 +66,12 @@ export default function CookieBanner() {
   }, []);
 
   const applyConsent = (consentState: ConsentState) => {
-    localStorage.setItem("cookie_consent_v2", JSON.stringify(consentState));
+    const payload: StoredConsentPayload = {
+      consent: consentState,
+      timestamp: Date.now(),
+    };
+
+    localStorage.setItem("cookie_consent_v2", JSON.stringify(payload));
 
     if (typeof window !== "undefined" && typeof window.gtag === "function") {
       window.gtag("consent", "update", consentState);

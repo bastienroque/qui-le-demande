@@ -36,7 +36,6 @@ export const OffresHeroSection = () => {
             </P>
           </motion.div>
 
-          {/* Colonne Droite : Animation d'entrée avec mise à l'échelle (Scale) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}

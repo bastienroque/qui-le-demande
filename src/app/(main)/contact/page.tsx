@@ -67,18 +67,17 @@ export default function Contact() {
                 </motion.div>
 
                 <motion.div variants={itemVariants} className="mt-12 space-y-2">
-                  <P className="text-xl">quiledemande@agence.com</P>
-                  <P className="text-xl">contact@quiledemande.com</P>
                   <P className="text-xl">
-                    +33 3 33 33 33 33{" "}
-                    <span className="text-sm">ps: c'est le num de Bambi</span>
+                    <a href="mailto:contact@quiledemande.fr">
+                      contact@quiledemande.fr
+                    </a>
                   </P>
                 </motion.div>
               </div>
 
               <motion.div variants={itemVariants}>
                 <P className="mt-12 text-sm">
-                  Nous vous répondrons. <br /> Wallah, je le jure.
+                  Nous vous répondrons. <br /> Je le jure.
                 </P>
               </motion.div>
             </motion.div>
@@ -89,12 +88,7 @@ export default function Contact() {
                   N'hésitez Pas À Nous <br /> Poser Des Questions
                 </H1>
                 <div className="mt-12 space-y-2">
-                  <P className="text-xl">quiledemande@agence.com</P>
-                  <P className="text-xl">contact@quiledemande.com</P>
-                  <P className="text-xl">
-                    +33 3 33 33 33 33{" "}
-                    <span className="text-sm">ps: c'est le num de Bambi</span>
-                  </P>
+                  <P className="text-xl">contact@quiledemande.fr</P>
                 </div>
               </div>
               <P className="mt-12 text-sm">

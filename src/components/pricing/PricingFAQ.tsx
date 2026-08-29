@@ -2,8 +2,6 @@
 
 import { useState } from "react";
 import { PRICING_FAQ, FAQItem } from "@/lib/data/pricing-faq";
-import Link from "next/link";
-import Button from "@/components/ui/Button";
 
 export const PricingFAQ = () => {
   const [openId, setOpenId] = useState<string | null>("commitment");
@@ -15,7 +13,6 @@ export const PricingFAQ = () => {
   return (
     <section className="py-16 md:py-28 bg-brand-white text-brand-black">
       <div className="container mx-auto px-4 max-w-4xl space-y-12">
-        {/* En-tête de section */}
         <div className="text-center space-y-3">
           <span className="inline-block bg-brand-black text-brand-white text-xs font-black uppercase px-3 py-1 border-2 border-brand-black">
             Réponses Rapides
@@ -29,7 +26,6 @@ export const PricingFAQ = () => {
           </p>
         </div>
 
-        {/* Liste des accordéons */}
         <div className="space-y-4">
           {PRICING_FAQ.map((item: FAQItem) => {
             const isOpen = openId === item.id;

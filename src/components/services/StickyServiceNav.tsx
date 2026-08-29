@@ -1,7 +1,7 @@
 "use client";
 
+import { SERVICES_POLES } from "@/lib/data";
 import { useEffect, useState } from "react";
-import { SERVICES_POLES } from "@/lib/data/services-and-pricing";
 
 export const StickyServiceNav = () => {
   const [activeSection, setActiveSection] = useState<string>("");

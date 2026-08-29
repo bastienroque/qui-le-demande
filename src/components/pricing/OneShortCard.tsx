@@ -3,6 +3,11 @@ import Button from "@/components/ui/Button";
 import { OneShotService } from "@/types";
 
 export const OneShotCard = ({ service }: { service: OneShotService }) => {
+  const redirectParams = new URLSearchParams({
+    offerType: "one-shot",
+    serviceType: service.title,
+  }).toString();
+
   return (
     <div className="bg-brand-white text-brand-black border-2 border-brand-black  p-4 flex flex-col justify-between gap-6">
       <div className="space-y-4">
@@ -20,7 +25,7 @@ export const OneShotCard = ({ service }: { service: OneShotService }) => {
           {service.description}
         </p>
 
-        <ul className="space-y-2 text-xs font-bold pt-2">
+        <ul className="space-y-2 text-xs md:text-sm font-bold pt-2">
           {service.deliverables.map((item, idx) => (
             <li key={idx} className="flex items-start gap-2">
               <span className="text-brand-blue font-black">✓</span>
@@ -30,7 +35,7 @@ export const OneShotCard = ({ service }: { service: OneShotService }) => {
         </ul>
       </div>
 
-      <Link href="/contact" className="block">
+      <Link href={`/contact?${redirectParams}`} className="block">
         <Button
           id={service.id}
           variant="secondary"

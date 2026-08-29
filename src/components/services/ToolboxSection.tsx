@@ -35,11 +35,11 @@ export const ToolboxSection = () => {
   }, []);
 
   return (
-    <section className="relative w-full bg-brand-white text-brand-black py-24 md:py-32 overflow-hidden">
+    <section className="relative w-full bg-brand-red text-brand-black py-24 md:py-32 overflow-hidden">
       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#000_1px,transparent_1px)] bg-size-[20px_20px] pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10 flex flex-col gap-12 md:gap-16">
-        <H1 className="text-left leading-tight font-black">
+        <H1 className="text-left text-brand-white leading-tight font-black">
           Nos Outils À<br />
           Portée De Main
         </H1>

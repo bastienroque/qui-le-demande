@@ -3,13 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import Button from "../ui/Button";
-import { SERVICES_BY_CATEGORY } from "@/lib/data/services-and-pricing";
 import { ServicePole } from "@/types";
+import { SERVICES_BY_CATEGORY } from "@/lib/data";
 
 interface ServicesSectionProps {
   showButton?: boolean;
 }
-
 interface InteractivePole extends ServicePole {
   isRead?: boolean;
 }

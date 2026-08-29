@@ -1,8 +1,3 @@
-import {
-  MONTHLY_PLANS,
-  ONE_SHOT_SERVICES,
-} from "@/lib/data/services-and-pricing";
-
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { OneShotCard } from "@/components/pricing/OneShortCard";
@@ -11,6 +6,7 @@ import { OffresHeroSection } from "@/components/pricing/OffresHeroSection";
 import StickyPricingNav from "@/components/pricing/StickyPricingNav";
 import { PricingSimulatorSection } from "@/components/pricing/PricingSimulatorSection";
 import { PricingCard } from "@/components/pricing/PricingPlanCard";
+import { MONTHLY_PLANS, ONE_SHOT_SERVICES } from "@/lib/data";
 
 export const metadata = {
   title: "Offres & Tarifs | Qui Le Demande ?",

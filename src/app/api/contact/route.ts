@@ -77,7 +77,7 @@ ${data.description}
 
     await sgMail.send({
       to: "agence.quiledemande@gmail.com",
-      from: "agence.quiledemande@gmail.com",
+      from: "contact@quiledemande.fr",
       replyTo: data.email,
       subject: emailSubject,
       text: textContent,

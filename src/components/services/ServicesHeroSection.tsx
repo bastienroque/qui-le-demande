@@ -37,7 +37,6 @@ export const ServicesHeroSection = () => {
             </P>
           </motion.div>
 
-          {/* Colonne Droite : Boîte néo-brutaliste avec effet hover */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}

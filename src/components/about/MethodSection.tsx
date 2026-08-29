@@ -13,9 +13,8 @@ export function MethodSection() {
   }, []);
 
   return (
-    <section className="w-full py-24 md:py-32 bg-brand-red text-brand-white relative overflow-hidden">
+    <section className="w-full py-24 md:py-32 bg-brand-blue text-brand-white relative overflow-hidden">
       <div className="container mx-auto px-4 flex flex-col gap-8 relative z-10">
-        {/* En-tête de section */}
         <div className="text-center space-y-3">
           <span className="inline-block bg-brand-white text-brand-black text-xs font-black uppercase px-3 py-1 tracking-widest border-2 border-brand-black">
             Notre Processus
@@ -26,7 +25,6 @@ export function MethodSection() {
           </H1>
         </div>
 
-        {/* Grille compacte des étapes */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full pt-4">
           {METHOD_STEPS.map((step, index) => {
             const cardContent = (

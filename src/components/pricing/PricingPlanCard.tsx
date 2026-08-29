@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import Button from "@/components/ui/Button";
 import { PricingPlan } from "@/types";
+import Link from "next/link";
+import Button from "@/components/ui/Button";
 
 interface PricingCardProps {
   plan: PricingPlan;
@@ -36,7 +36,7 @@ export const PricingCard = ({ plan }: PricingCardProps) => {
           {plan.period && <span className="font-bold"> {plan.period}</span>}
         </div>
 
-        <ul className="space-y-2 font-bold mb-6">
+        <ul className="space-y-2 text-xs md:text-sm font-bold mb-6">
           {plan.features.map((feat, idx) => (
             <li key={idx} className="flex items-center gap-2">
               <span className="text-brand-red font-black">&rarr;</span>

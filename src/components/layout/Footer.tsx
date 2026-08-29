@@ -42,7 +42,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 flex flex-col gap-10 md:gap-12">
         <div className="flex flex-col md:flex-row justify-between items-stretch gap-8 md:gap-12">
           <div className="flex flex-col justify-between gap-8 md:gap-12">
-            <div className="w-fit flex flex-col gap-3 font-black text-sm uppercase">
+            {/* <div className="w-fit flex flex-col gap-3 font-black text-sm uppercase">
               {socialLinks.map((link) => (
                 <a
                   key={link.href}
@@ -54,7 +54,7 @@ const Footer = () => {
                   {link.label} ↗
                 </a>
               ))}
-            </div>
+            </div> */}
 
             <Link
               href="/"

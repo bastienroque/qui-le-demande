@@ -1,9 +1,9 @@
-import { SERVICES_POLES } from "@/lib/data/services-and-pricing";
-import { ServicePoleCard } from "@/components/services/ServicePoleCard";
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { ServicesHeroSection } from "@/components/services/ServicesHeroSection";
+import { ServicePoleCard } from "@/components/services/ServicePoleCard";
 import StickyServiceNav from "@/components/services/StickyServiceNav";
+import { SERVICES_POLES } from "@/lib/data";
 
 export const metadata = {
   title: "Nos Services | Qui Le Demande ?",
