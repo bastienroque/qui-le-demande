@@ -32,31 +32,24 @@ export default function LegalPage() {
             </div>
             <div className="text-brand-black/90 leading-relaxed font-medium space-y-2 text-sm sm:text-base">
               <p>
-                Le site <strong>Qui Le Demande ?</strong> est édité par :
+                Le site <strong>Qui Le Demande ?</strong> est édité dans le
+                cadre de la présentation de services à venir :
               </p>
               <ul className="list-disc list-inside space-y-1 font-mono text-sm">
                 <li>
-                  <strong>Nom / Raison Sociale :</strong> [Votre Nom Prénom ou
-                  Nom de Société]
+                  <strong>Nom de la marque / Projet :</strong> Qui Le Demande ?
                 </li>
                 <li>
-                  <strong>Statut juridique :</strong> [ex: Empresário em Nome
-                  Individual / Unipessoal Lda]
+                  <strong>Statut :</strong> Site d'information et de prise de
+                  contact préalable (Activité en cours de création /
+                  immatriculation)
                 </li>
                 <li>
-                  <strong>NIF / NIPC (Portugal) :</strong> [Votre numéro NIF -
-                  Ex: PT 123 456 789]
+                  <strong>Responsable de publication :</strong> L'équipe Qui Le
+                  Demande ?
                 </li>
                 <li>
-                  <strong>Siège social :</strong> [Votre adresse complète au
-                  Portugal]
-                </li>
-                <li>
-                  <strong>Directeur de la publication :</strong> [Votre Nom et
-                  Prénom]
-                </li>
-                <li>
-                  <strong>Contact :</strong>{" "}
+                  <strong>Contact principal :</strong>{" "}
                   <a
                     href="mailto:contact@quiledemande.fr"
                     className="font-bold underline hover:opacity-80"
@@ -65,6 +58,11 @@ export default function LegalPage() {
                   </a>
                 </li>
               </ul>
+              <p className="text-xs text-brand-black/70 italic pt-2">
+                * Les informations juridiques complètes (Raison sociale,
+                NIF/NIPC et siège social) seront mises à jour dès la
+                finalisation des formalités d'immatriculation.
+              </p>
             </div>
           </div>
 
@@ -79,14 +77,18 @@ export default function LegalPage() {
               <p>Le site est hébergé par :</p>
               <ul className="list-disc list-inside space-y-1 font-mono text-sm">
                 <li>
-                  <strong>Hébergeur :</strong> Vercel Inc.
+                  <strong>Hébergeur :</strong> Dynadot
                 </li>
                 <li>
-                  <strong>Adresse :</strong> 440 N Barranca Ave #4133 Covina, CA
-                  91723, USA
-                </li>
-                <li>
-                  <strong>Site Web :</strong> https://quiledemande.fr
+                  <strong>Site Web :</strong>{" "}
+                  <a
+                    href="https://dynadot.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline font-bold"
+                  >
+                    https://dynadot.com
+                  </a>
                 </li>
               </ul>
             </div>
@@ -114,9 +116,9 @@ export default function LegalPage() {
                   formulaire de contact.
                 </li>
                 <li>
-                  <strong>Finalité du traitement :</strong> Traiter vos demandes
-                  de devis, étudier vos besoins web/Ads et vous recontacter sur
-                  le créneau horaire sélectionné.
+                  <strong>Finalité du traitement :</strong> Répondre à vos
+                  demandes de renseignements, étudier vos besoins web/Ads et
+                  vous recontacter sur le créneau horaire sélectionné.
                 </li>
                 <li>
                   <strong>Précision sur les créneaux horaires :</strong> Les
