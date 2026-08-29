@@ -77,7 +77,7 @@ ${data.description}
 
     await sgMail.send({
       to: "agence.quiledemande@gmail.com",
-      from: "contact@quiledemande.fr",
+      from: "agence.quiledemande@gmail.com",
       replyTo: data.email,
       subject: emailSubject,
       text: textContent,
@@ -87,7 +87,7 @@ ${data.description}
   } catch (error) {
     console.error("Form submission error:", error);
     return NextResponse.json(
-      { error: "Failed to send message" },
+      { error: "Erreur d'envoi, veuillez réessayer." },
       { status: 500 },
     );
   }
