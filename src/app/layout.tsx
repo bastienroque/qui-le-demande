@@ -4,6 +4,7 @@ import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
 import CookieBanner from "@/components/compliance/CookieBanner";
 import "./globals.css";
+import JsonLd from "@/components/seo/JsonLd";
 
 const lexendSans = Lexend({
   variable: "--font-lexend-sans",
@@ -40,8 +41,8 @@ export default function RootLayout({
         </Script>
       </head>
       <body className="min-h-full flex flex-col">
+        <JsonLd />
         {children}
-
         <CookieBanner />
 
         <GoogleTagManager gtmId="GTM-KVWD6R9T" />
