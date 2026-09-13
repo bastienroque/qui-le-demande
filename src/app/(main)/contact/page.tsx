@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { motion, Variants } from "framer-motion";
 import { H1, P } from "@/components/ui/Typography";
 import ContactForm from "@/components/forms/ContactForm";
-import type { Metadata } from "next";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -39,22 +38,6 @@ const formVariants: Variants = {
       ease: "easeOut",
       delay: 0.2,
     },
-  },
-};
-
-export const metadata: Metadata = {
-  title: "Contact & Devis Google Ads, Landing Page | Qui Le Demande ?",
-  description:
-    "Projet Google Ads, refonte de landing page ou audit Consent Mode v2 ? Contactez Qui Le Demande ? et obtenez une réponse sous 24h.",
-  alternates: {
-    canonical: "/contact",
-  },
-  openGraph: {
-    title: "Contactez Qui Le Demande ? | Devis Google Ads & Web",
-    description:
-      "Discutons de vos objectifs d'acquisition et d'optimisation de vos conversions. Réponse rapide garantie.",
-    url: "https://quiledemande.fr/contact",
-    type: "website",
   },
 };
 
