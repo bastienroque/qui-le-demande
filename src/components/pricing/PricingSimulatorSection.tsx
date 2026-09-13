@@ -18,6 +18,20 @@ function PricingSimulatorContent() {
     if (offerParam === "e-commerce" || offerParam === "essentiel") {
       setSelectedOfferId(offerParam);
     }
+
+    if (
+      typeof window !== "undefined" &&
+      window.location.hash === "#simulateur"
+    ) {
+      const timer = setTimeout(() => {
+        const element = document.getElementById("simulateur");
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+
+      return () => clearTimeout(timer);
+    }
   }, [searchParams]);
 
   const currentOffer = SIMULATOR_OFFERS[selectedOfferId];
