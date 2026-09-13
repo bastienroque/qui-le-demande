@@ -11,9 +11,23 @@ const lexendSans = Lexend({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Qui Le Demande ?",
-  description: "L’agence qui vous écoute",
+export const metadata = {
+  metadataBase: new URL("https://quiledemande.fr"),
+  title: {
+    default: "Qui Le Demande ? | Agence Web & Digital",
+    template: "%s | Qui Le Demande ?",
+  },
+  description:
+    "Agence spécialisée en gestion de campagnes Google Ads et création de sites web.",
+  openGraph: {
+    title: "Qui Le Demande ? | Agence Web & Digital",
+    description:
+      "Optimisez vos campagnes publicitaires et votre conversion web.",
+    url: "https://quiledemande.fr",
+    siteName: "Qui Le Demande ?",
+    locale: "fr_FR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({

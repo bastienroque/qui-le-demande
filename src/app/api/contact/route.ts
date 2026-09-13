@@ -50,7 +50,7 @@ export async function POST(request: Request) {
 
     const formattedCallSlot =
       callSlotLabels[data.callSlot || ""] || data.callSlot || "Non précisé";
-    const emailSubject = `🚀 Nouveau Lead : ${fullName} (${data.company || "Indépendant / Particulier"})`;
+    const emailSubject = `🚀 Nouveau Lead : ${fullName} ${data.company}`;
 
     const textContent = `
 NOUVEAU CONTACT - QUI LE DEMANDE

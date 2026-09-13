@@ -1,15 +1,24 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Button from "@/components/ui/Button";
 import { SIMULATOR_OFFERS } from "@/lib/data/pricing-simulator";
 import Link from "next/link";
 
-export const PricingSimulatorSection = () => {
+function PricingSimulatorContent() {
+  const searchParams = useSearchParams();
   const [selectedOfferId, setSelectedOfferId] = useState<
     "essentiel" | "e-commerce"
   >("essentiel");
   const [stepIndex, setStepIndex] = useState<number>(0);
+
+  useEffect(() => {
+    const offerParam = searchParams.get("offer");
+    if (offerParam === "e-commerce" || offerParam === "essentiel") {
+      setSelectedOfferId(offerParam);
+    }
+  }, [searchParams]);
 
   const currentOffer = SIMULATOR_OFFERS[selectedOfferId];
 
@@ -173,5 +182,13 @@ export const PricingSimulatorSection = () => {
         </div>
       </div>
     </section>
+  );
+}
+
+export const PricingSimulatorSection = () => {
+  return (
+    <Suspense fallback={null}>
+      <PricingSimulatorContent />
+    </Suspense>
   );
 };

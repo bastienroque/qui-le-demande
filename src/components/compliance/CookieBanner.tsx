@@ -113,7 +113,7 @@ export default function CookieBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-6 sm:bottom-6 sm:max-w-lg bg-brand-white text-brand-black p-5 sm:p-6 border-2 border-brand-black z-50 transition-all">
+    <div className="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-24 sm:bottom-6 sm:max-w-lg bg-brand-white text-brand-black p-5 sm:p-6 border-2 border-brand-black z-50 transition-all">
       <div className="flex items-center justify-between gap-2 mb-3">
         <span className="inline-block bg-brand-black text-brand-white text-[10px] font-black uppercase px-2 py-0.5 border border-brand-black">
           Gestion des Cookies
