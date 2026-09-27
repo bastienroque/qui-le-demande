@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
-import sgMail from "@sendgrid/mail";
+import { Resend } from "resend";
 import { z } from "zod";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   firstName: z.string().trim().min(2, "Prénom requis").max(50),
@@ -50,7 +50,8 @@ export async function POST(request: Request) {
 
     const formattedCallSlot =
       callSlotLabels[data.callSlot || ""] || data.callSlot || "Non précisé";
-    const emailSubject = `🚀 Nouveau Lead : ${fullName} ${data.company}`;
+    const emailSubject =
+      `🚀 Nouveau Lead : ${fullName} ${data.company || ""}`.trim();
 
     const textContent = `
 NOUVEAU CONTACT - QUI LE DEMANDE
@@ -75,13 +76,21 @@ Délai d'intervention : ${data.timeline || "Non précisé"}
 ${data.description}
     `.trim();
 
-    await sgMail.send({
-      to: "agence.quiledemande@gmail.com",
-      from: "agence.quiledemande@gmail.com",
+    const { error } = await resend.emails.send({
+      from: "Qui Le Demande <contact@quiledemande.fr>",
+      to: ["contact@quiledemande.fr"],
       replyTo: data.email,
       subject: emailSubject,
       text: textContent,
     });
+
+    if (error) {
+      console.error("Resend error:", error);
+      return NextResponse.json(
+        { error: "Erreur d'envoi, veuillez réessayer." },
+        { status: 500 },
+      );
+    }
 
     return NextResponse.json({ success: true });
   } catch (error) {

@@ -23,7 +23,7 @@ export default function NotFound() {
         <div className="pt-4">
           <Link
             href="/"
-            className="inline-block bg-brand-black text-brand-white font-black text-lg px-8 py-4 border-2 border-brand-black  hover:translate-x-0.5 hover:translate-y-0.5 hover:shadow-[2px_2px_0px_#000] transition-all"
+            className="inline-block bg-brand-black text-brand-white font-black text-lg px-8 py-4 border-2 border-brand-black hover:translate-y-0.5 transition-all"
           >
             Retourner à l'accueil
           </Link>

@@ -35,7 +35,7 @@ export const StickyServiceNav = () => {
         });
       },
       {
-        rootMargin: "-20% 0px -20% 0px",
+        rootMargin: "-120px 0px -60% 0px",
         threshold: 0,
       },
     );
@@ -76,7 +76,7 @@ export const StickyServiceNav = () => {
       <div className="container mx-auto px-4 flex flex-wrap justify-center items-center gap-2 md:gap-4">
         {SERVICES_POLES.map((pole) => {
           const isActive = activeSection === pole.id;
-          const badgeLabel = pole.badge || pole.badge || pole.title;
+          const badgeLabel = pole.badge || pole.title;
 
           return (
             <button
